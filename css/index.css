@@ -1,0 +1,233 @@
+html, body, #app {
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #d129e7;
+}
+
+.luck-draw {
+    position: absolute;
+    top: 274px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px rgba(255, 255, 255, .3);
+}
+
+.info-wrap {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 28%;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 20px;
+}
+
+.info-wrap .info-title {
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.info-wrap .wrap {
+    height: 68%;
+    overflow: hidden;
+}
+
+.info-wrap .user-wrap {
+    font-size: 14px;
+    color: #fff;
+}
+
+.anim {
+    transition: all 0.5s;
+    margin-top: -25px;
+}
+
+.info-wrap .user-wrap .user-list {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    top: 90%;
+}
+
+.button-wrap .btn {
+    width: 40%;
+    height: 44px;
+    background-color: #F80056;
+    border-radius: 22px;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.dia-wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 99;
+}
+
+.description-dia,
+.my-gift-dia,
+.get-gift-dia,
+.message-dia {
+    box-sizing: border-box;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    padding: 60px 50px 40px 80px;
+    height: 360px;
+    background-image: url("../img/dia-bg1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 999;
+    color: #9E55FF;
+}
+
+.my-gift-dia {
+    background-image: url("../img/dia-bg2.png");
+}
+
+.description-dia .title,
+.my-gift-dia .title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.description-dia .title:nth-child(3),
+.my-gift-dia .title:nth-child(3) {
+    margin-top: 15px;
+}
+
+.description-dia .content,
+.my-gift-dia .content {
+    font-size: 14px;
+    line-height: 20px;
+    max-height: 40px;
+    overflow: auto;
+}
+
+.description-dia .btn,
+.my-gift-dia .btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 190px;
+    margin: 10px 0 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: linear-gradient(180deg, #8449C9, #8E36FC);
+    border-radius: 15px;
+}
+
+.my-gift-list a {
+    text-decoration: none;
+    color: #9E55FF !important;
+}
+
+.get-gift-dia,
+.message-dia {
+    background-image: none;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.get-gift-dia img {
+    width: 150px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.get-gift-dia .content,
+.message-dia .content {
+    color: #28062E;
+    font-size: 18px;
+    text-align: center;
+    padding: 120px 0 100px;
+}
+
+.get-gift-dia .content > img,
+.message-dia .content > img {
+    width: 100%;
+    text-align: center;
+}
+
+.get-gift-dia .btn-wrap {
+    border-top: 1px solid #D1D1DA;
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.message-dia {
+    height: 200px;
+}
+
+.message-dia .title {
+    color: #28062E;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.message-dia .content {
+    padding: 20px 0 50px;
+    font-size: 16px;
+}
+
+.message-dia .btn-wrap {
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px solid #D1D1DA;
+}
+
+.message-dia .btn-wrap div {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+}
+
+.message-dia .btn-wrap .cancel {
+    color: #9494A0;
+    border-right: 1px solid #D1D1DA;
+}
+
+
+
+

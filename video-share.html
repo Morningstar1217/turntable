@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="version" content="1.0">
+    <title>视频</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="css/video.css">
+</head>
+<body>
+<div id="app">
+    <div class="dia-wrap">
+        <div class="video-wrap">
+            <img src="./img/video_title.png" alt="">
+            <div class="video-title">
+                <div>恭喜您</div>
+                <div>成为抖音传播达人</div>
+                <div>您参与的抖音作品是</div>
+            </div>
+            <video disablePictureInPicture controlslist="nodownload" oncontextmenu="return false" class="small"
+                   src="https://www.runoob.com/try/demo_source/movie.mp4" controls></video>
+            <div class="description-wrap">
+                <div class="title">活动介绍</div>
+                <div class="content">
+                    活动内容活动内容活动内容活动内容活动内容活动内容
+                </div>
+            </div>
+            <div class="company-name share">
+                <img src="./img/logo.png" alt="">
+                阿米多技术
+            </div>
+        </div>
+        <div class="btn-wrap">
+            <div class="btn">
+                <a href="./card.html">查看卡券</a>
+            </div>
+            <div class="btn" @click="diaFlag = true">
+                领取卡券
+            </div>
+        </div>
+    </div>
+    <div class="card-wrap" v-if="diaFlag">
+        <div class="card-content">
+            <div class="card-bg">
+                <div class="left">
+                    <div>可乐一瓶</div>
+                    <div>截至日期：2021-02-01</div>
+                    <div>领取时间：2021-02-01</div>
+                    <div>核销码 2900997765</div>
+                </div>
+                <div class="right">
+                    未使用
+                </div>
+            </div>
+            <div class="card-inp">
+                <input type="text" placeholder="请找店员要核销密码"/>
+                <div>核销</div>
+            </div>
+            <img src="./img/gift_icon.png" alt="二维码" class="qrcode">
+            <div class="btn-wrap">
+                <div>
+                    <a href="./card.html">我的卡券</a>
+                </div>
+                <div>商户位置</div>
+                <div>前往商户</div>
+            </div>
+            <img src="./img/close.png" alt="" class="close" @click="diaFlag = false">
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.js"></script>
+<script src="./js/vue-luck-draw.umd.min.js"></script>
+<script type="module">
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                diaFlag: false
+            }
+        },
+        mounted() {
+
+        },
+        created() {
+
+        },
+        methods: {}
+    })
+</script>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="version" content="1.0">
+    <title>卡券</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="css/card.css">
+</head>
+<body>
+<div id="app">
+    <div class="card-center">
+        <div class="card-list" :class="{used:item.status===1}" v-for="(item,index) in cardList" :key="index"
+             @click="handleUse(item)">
+            <div class="left">
+                <span>￥</span>{{item.money}}
+            </div>
+            <div class="middle">
+                <div>满{{item.totalMoney}}减{{item.money}}</div>
+                <div>截至日期:{{item.last_date}}</div>
+                <div>核销码 {{item.code}}</div>
+            </div>
+            <div class="right">
+                <div>{{item.status === 0 ? '未使用' : '已使用'}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="card-wrap" v-if="diaFlag">
+        <div class="card-content">
+            <div class="card-bg">
+                <div class="left">
+                    <div>可乐一瓶</div>
+                    <div>截至日期：2021-02-01</div>
+                    <div>领取时间：2021-02-01</div>
+                    <div>核销码 2900997765</div>
+                </div>
+                <div class="right">
+                    未使用
+                </div>
+            </div>
+            <div class="card-inp">
+                <input type="text" placeholder="请找店员要核销密码"/>
+                <div>核销</div>
+            </div>
+            <img src="./img/gift_icon.png" alt="二维码" class="qrcode">
+            <div class="btn-wrap">
+                <div>
+                    <a href="./card.html">我的卡券</a>
+                </div>
+                <div>商户位置</div>
+                <div>前往商户</div>
+            </div>
+            <img src="./img/close.png" alt="" class="close" @click="diaFlag = false">
+        </div>
+    </div>
+    <div class="message-dia" v-if="msgFlag">
+        <div class="title">温馨提示</div>
+        <div class="content">
+            参加活动将会发一条视频在您的抖音哦
+        </div>
+        <div class="btn-wrap">
+            <div class="cancel" @click="msgFlag = false">放弃</div>
+            <div class="confirm" @click="msgFlag = false">确认</div>
+        </div>
+    </div>
+    <div class="menu-wrap">
+        <div class="btn">
+            <a>查看卡券</a>
+        </div>
+        <div class="btn">
+            前往商户
+        </div>
+    </div>
+    <div class="dia-wrap" v-if="msgFlag"></div>
+</div>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.js"></script>
+<script src="./js/vue-luck-draw.umd.min.js"></script>
+<script type="module">
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                cardList: [
+                    {
+                        totalMoney: 50,
+                        money: 20,
+                        code: 2900997765,
+                        last_date: '2021-02-01',
+                        status: 0
+                    },
+                    {
+                        totalMoney: 50,
+                        money: 20,
+                        code: 2900997765,
+                        last_date: '2021-02-01',
+                        status: 0
+                    },
+                    {
+                        totalMoney: 50,
+                        money: 20,
+                        code: 2900997765,
+                        last_date: '2021-02-01',
+                        status: 0
+                    },
+                    {
+                        totalMoney: 50,
+                        money: 20,
+                        code: 2900997765,
+                        last_date: '2021-02-01',
+                        status: 0
+                    },
+                    {
+                        totalMoney: 50,
+                        money: 20,
+                        code: 2900997765,
+                        last_date: '2021-02-01',
+                        status: 0
+                    },
+                    {
+                        totalMoney: 50,
+                        money: 20,
+                        code: 2900997765,
+                        last_date: '2021-02-01',
+                        status: 1
+                    },
+                    {
+                        totalMoney: 50,
+                        money: 20,
+                        code: 2900997765,
+                        last_date: '2021-02-01',
+                        status: 1
+                    }
+                ],
+                diaFlag: false,
+                msgFlag: false
+            }
+        },
+        mounted() {
+
+        },
+        created() {
+
+        },
+        methods: {
+            handleUse(item) {
+                if (item.status === 1) return false
+                this.diaFlag = true
+            }
+        }
+    })
+</script>
+</html>

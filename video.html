@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="version" content="1.0">
+    <title>视频</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="css/video.css">
+</head>
+<body>
+<div id="app">
+    <video disablePictureInPicture controlslist="nodownload" oncontextmenu="return false" class="big"
+           src="https://www.runoob.com/try/demo_source/movie.mp4" controls></video>
+    <div class="logo-wrap">
+        <img src="./img/gift_icon.png" alt="">
+        <div class="info">
+            <div>吃的多龙王</div>
+            <div>江苏省无锡市南长区小龙虾店</div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="description-wrap">
+        <div class="des-title">活动介绍</div>
+        <div class="des-content">大盆一大盆的龙虾端上桌,红红的龙虾扑鼻的香味,禁不住美味的诱思,让你顾不上戴手套,便挽起袖子,痛快淋漓,酣畅自如。</div>
+    </div>
+    <div class="video-btn btn-wrap">
+        <div class="send-btn">
+            <a href="./video-share.html">领取福利</a>
+        </div>
+        <div class="msg">
+            领取福利后会转发一条视频即可成功参与此活动
+        </div>
+    </div>
+    <div class="company-name">
+        <img src="./img/logo.png" alt="">
+        阿米多技术
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.js"></script>
+<script src="./js/vue-luck-draw.umd.min.js"></script>
+<script type="module">
+    new Vue({
+        el: '#app',
+        data() {
+            return {}
+        },
+        mounted() {
+
+        },
+        created() {
+
+        },
+        methods: {}
+    })
+</script>
+</html>

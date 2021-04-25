@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="version" content="1.0">
+    <title>抽奖</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="app"></div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.js"></script>
+<script src="./js/vue-luck-draw.umd.min.js"></script>
+<script type="module">
+    new Vue({
+        el: '#app',
+        template: `
+          <div class="box">
+          <LuckyWheel
+              class="luck-draw"
+              ref="LuckyWheel"
+              width="300px"
+              height="300px"
+              :blocks="blocks"
+              :prizes="prizes"
+              :buttons="buttons"
+              :default-style="defaultStyle"
+              :default-config="defaultConfig"
+              @start="startCallBack"
+              @end="endCallBack"
+          />
+          <div class="info-wrap">
+            <div class="info-title">中奖信息</div>
+            <div class="wrap">
+              <div class="user-wrap" :class="{'anim': animate}">
+                <div class="user-list" v-for="(item,index) in userList" :key="index">
+                  恭喜{{ item.name }}用户中奖
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-wrap">
+            <div class="btn" @click="desFlag = true">
+              活动详情
+            </div>
+            <div class="btn" @click="giftFlag = true">
+              中奖信息
+            </div>
+          </div>
+          <div class="my-gift-dia" v-if="giftFlag">
+            <div class="title">我的奖品</div>
+            <div class="content">2021-02-01至2021-06-21</div>
+            <div class="title">我的奖品</div>
+            <div class="content" style="height: 120px;max-height:none;">
+              <div class="my-gift-list" v-for="(item,index) in myGift" :key="index" @click="toGetGift(item)">
+                <a href="">{{ item.name }}</a>
+                <span style="margin-left: 5px">领取奖品</span>
+              </div>
+            </div>
+            <div class="btn" @click="giftFlag=false">关闭</div>
+          </div>
+          <div class="description-dia" v-if="desFlag">
+            <div class="title">活动时间</div>
+            <div class="content">2021-02-01至2021-06-21</div>
+            <div class="title">活动规则</div>
+            <div class="content" style="height: 120px;max-height:none;">
+              大转盘大转盘大转盘大转盘转盘大转盘大转盘大转盘大转盘转盘
+              <img src="./img/gift_icon.png" alt="">
+            </div>
+            <div class="btn" @click="desFlag=false">关闭</div>
+          </div>
+          <div class="get-gift-dia" style="height: 300px" v-if="getGiftFlag">
+            <img src="./img/gift_title.png" alt="">
+            <div class="content">
+              很遗憾，谢谢参与！
+            </div>
+            <div class="btn-wrap" @click="getGiftFlag = false">
+              确定
+            </div>
+          </div>
+          <div class="message-dia" v-if="msgFlag">
+            <div class="title">温馨提示</div>
+            <div class="content">
+              参加活动将会发一条视频在您的抖音哦
+            </div>
+            <div class="btn-wrap">
+              <div class="cancel" @click="msgFlag = false">放弃</div>
+              <div class="confirm" @click="joinActive">确认</div>
+            </div>
+          </div>
+          <div class="dia-wrap" v-if="desFlag||giftFlag||getGiftFlag||msgFlag"></div>
+          </div>`,
+        data() {
+            return {
+                prizes: [],
+                buttons: [{
+                    radius: '40px',
+                    imgs: [{ src: ('./img/turntable-pointer.png'), width: '105%', top: '-150%' }]
+                }],
+                blocks: [
+                    { padding: '0px', background: '#fa3e3f' },
+                    {
+                        padding: '30px',
+                        background: '#f9d400',
+                        imgs: [{
+                            src: './img/rotate-bg.gif',
+                            width: '100%',
+                            rotate: true
+                        }]
+                    },
+                    { padding: '1px', background: '#e76f51' }
+                ],
+                defaultStyle: {
+                    fontColor: '#fff',
+                    fontSize: '12px'
+                },
+                defaultConfig: {
+                    gutter: '1px'
+                },
+                userList: [
+                    {
+                        name: '戴菲菲'
+                    },
+                    {
+                        name: '菲戴戴'
+                    },
+                    {
+                        name: '菲戴菲'
+                    },
+                    {
+                        name: '戴菲菲'
+                    },
+                    {
+                        name: '菲戴戴'
+                    },
+                    {
+                        name: '菲戴菲'
+                    },
+                    {
+                        name: '戴菲菲'
+                    },
+                    {
+                        name: '菲戴戴'
+                    },
+                    {
+                        name: '菲戴菲'
+                    },
+                    {
+                        name: '戴菲菲'
+                    },
+                    {
+                        name: '菲戴戴'
+                    },
+                    {
+                        name: '菲戴菲'
+                    },
+                    {
+                        name: '戴菲菲'
+                    },
+                    {
+                        name: '菲戴戴'
+                    },
+                    {
+                        name: '菲戴菲'
+                    },
+                    {
+                        name: '戴菲菲'
+                    },
+                    {
+                        name: '菲戴戴'
+                    },
+                    {
+                        name: '菲戴菲'
+                    },
+                    {
+                        name: '戴菲菲'
+                    },
+                    {
+                        name: '菲戴戴'
+                    },
+                    {
+                        name: '菲戴菲'
+                    },
+                    {
+                        name: '戴菲菲'
+                    },
+                    {
+                        name: '菲戴戴'
+                    },
+                    {
+                        name: '菲戴菲'
+                    }
+                ],
+                animate: false,
+                desFlag: false,
+                giftFlag: false,
+                getGiftFlag: false,
+                msgFlag: false,
+                myGift: [
+                    {
+                        name: '一等奖'
+                    },
+                    {
+                        name: '二等奖'
+                    }
+                ],
+                count: 0
+            }
+        },
+        mounted() {
+            window.addEventListener('resize', () => {
+                this.setView()
+            })
+            if (sessionStorage.getItem('count')) this.count = sessionStorage.getItem('count')
+            this.getPrizesList()
+            this.setView()
+        },
+        created() {
+            setInterval(this.scroll, 1500)
+        },
+        methods: {
+            getPrizesList() {
+                const prizes = []
+                let data = [
+                    { name: '谢谢参与', img: './img/no-gift.png', color: '#ff6393' },
+                    { name: '礼物', img: './img/decorate1.png', color: '#ffc287' },
+                    { name: '抽奖券', img: './img/decorate1.png', color: '#ff6393' },
+                    { name: '元宝', img: './img/decorate1.png', color: '#ffc287' },
+                    { name: '元宝', img: './img/decorate1.png', color: '#ff6393' },
+                    { name: '元宝', img: './img/decorate1.png', color: '#ffc287' }
+                ]
+                data.forEach((item, index) => {
+                    prizes.push({
+                        name: item.name,
+                        background: item.color,
+                        fonts: [{ text: item.name, top: '10%' }],
+                        imgs: [{ src: item.img, width: '30%', top: '35%' }]
+                    })
+                })
+                this.prizes = prizes
+            },
+            startCallBack() {
+                if (!this.count) return this.msgFlag = true
+                this.joinActive()
+            },
+            endCallBack(prize) {
+                this.getGiftFlag = true
+            },
+            scroll() {
+                this.animate = true
+                setTimeout(() => {
+                    this.userList.push(this.userList[0])
+                    this.userList.shift()
+                    this.animate = false
+                }, 500)
+            },
+            joinActive() {
+                this.msgFlag = false
+                this.$refs.LuckyWheel.play()
+                setTimeout(() => {
+                    this.count++
+                    sessionStorage.setItem('count', this.count)
+                    this.$refs.LuckyWheel.stop(0)
+                }, 3000)
+            },
+            toGetGift(item) {
+                //判断是否跳转
+
+            },
+            setView() {
+                const WIDTH = 750
+                document.documentElement.style.fontSize = (20 * screen.width / WIDTH) + 'px'
+            }
+        }
+    })
+</script>
+</html>
