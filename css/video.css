@@ -20,64 +20,64 @@ video::-webkit-media-controls-time-remaining-display {
 
 video.big {
     display: block;
-    width: 92%;
-    margin: 10px auto;
-    border-radius: 8px;
+    width: 34rem;
+    margin: 1rem auto;
+    border-radius: .8rem;
     background-color: #000;
-    max-height: 300px;
+    max-height: 30rem;
 }
 
 .logo-wrap {
-    padding: 10px 20px 20px;
+    padding: 1rem 2rem 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 .logo-wrap img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    border-radius: 6px;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+    border-radius: .6rem;
 }
 
 .logo-wrap .info {
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #EFF5F8;
 }
 
 .info div:nth-child(1) {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .line {
-    width: 92%;
-    height: 1px;
+    width: 34rem;
+    height: .1rem;
     background-color: #fff;
     margin: 0 auto;
     opacity: 0.12;
 }
 
 .description-wrap {
-    width: 92%;
-    max-height: 200px;
-    margin: 20px auto;
+    width: 34rem;
+    max-height: 20rem;
+    margin: 2rem auto;
     overflow: auto;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 1rem;
     background-color: #313131;
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
 }
 
 .description-wrap .des-title {
     text-align: center;
-    padding: 20px 0;
+    padding: 2rem 0;
 }
 
 .description-wrap .des-content {
-    padding: 0 10px 10px;
-    font-size: 14px;
-    line-height: 25px;
+    padding: 0 1rem 1rem;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
 }
 
 .dia-wrap .btn-wrap,
@@ -85,7 +85,7 @@ video.big {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 10rem;
     text-align: center;
     color: #EFF5F8;
 }
@@ -96,20 +96,20 @@ video.big {
 
 .dia-wrap .btn-wrap .msg,
 .video-btn .msg {
-    font-size: 13px;
-    margin-top: 16px;
-    color: rgba(255,255,255,.63);
+    font-size: 1.3rem;
+    margin-top: 1.6rem;
+    color: rgba(255, 255, 255, .63);
 }
 
 .dia-wrap .btn-wrap .send-btn,
 .video-btn .send-btn {
-    width: 343px;
-    height: 44px;
-    line-height: 44px;
+    width: 34rem;
+    height: 4.4rem;
+    line-height: 4.4rem;
     color: #fff;
     text-align: center;
-    font-size: 18px;
-    border-radius: 22px;
+    font-size: 1.8rem;
+    border-radius: 2.2rem;
     margin: 0 auto;
     background-color: #F30D5F;
 }
@@ -122,13 +122,13 @@ video.big {
 
 .company-name {
     position: absolute;
-    bottom: 30px;
+    bottom: 3rem;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
-    font-size: 12px;
-    margin-top: 10px;
-    color: rgba(255,255,255,.63);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, .63);
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -143,14 +143,14 @@ video.big {
 }
 
 .company-name img {
-    width: 14px;
-    margin-right: 5px;
+    width: 1.4rem;
+    margin-right: .5rem;
 }
 
-.company-name.share img{
+.company-name.share img {
     position: static;
-    width: 14px;
-    margin-right: 5px;
+    width: 1.4rem;
+    margin-right: .5rem;
 }
 
 .dia-wrap {
@@ -168,74 +168,75 @@ video.big {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 350px;
-    height: 550px;
+    width: 35rem;
+    height: 55rem;
     background-color: #111;
-    border-radius: 25px;
+    border-radius: 2.5rem;
 }
 
-.dia-wrap .video-wrap>img {
+.dia-wrap .video-wrap > img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -40px;
-    width: 80px;
-    height: 80px;
+    top: -4rem;
+    width: 8rem;
+    height: 8rem;
 }
 
 .dia-wrap .video-wrap .video-title {
-    padding-top: 60px;
+    padding-top: 6rem;
     text-align: center;
     color: #fff;
 }
 
 .dia-wrap .video-wrap .video-title div:nth-child(1) {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 .dia-wrap .video-wrap .video-title div:nth-child(2) {
-    font-size: 14px;
-    margin-bottom: 25px;
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
 }
 
 .dia-wrap .video-wrap .video-title div:nth-child(3) {
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #F9DCA7;
-    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
 }
 
 .dia-wrap .video-wrap .small {
-    width: 300px;
-    max-height: 180px;
+    width: 30rem;
+    max-height: 18rem;
     margin: 0 auto;
     display: block;
 }
 
 .dia-wrap .description-wrap {
     box-sizing: border-box;
-    width: 300px;
-    height: 150px;
-    padding: 10px;
-    margin: 20px auto 0;
-    border-radius: 20px;
+    width: 30rem;
+    height: 15rem;
+    padding: 1rem;
+    margin: 2rem auto 0;
+    border-radius: 2rem;
     background-color: rgba(203, 203, 203, .1);
     color: #fff;
 }
 
 .dia-wrap .description-wrap .title {
     text-align: center;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .dia-wrap .description-wrap .content {
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 1.4rem;
+    margin-top: 1rem;
 }
 
 .dia-wrap .btn-wrap {
     margin: 0 auto;
     display: flex;
+    height: 6rem;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -243,11 +244,11 @@ video.big {
 
 .dia-wrap .btn-wrap .btn {
     width: 45%;
-    height: 44px;
-    line-height: 44px;
+    height: 4.4rem;
+    line-height: 4.4rem;
     text-align: center;
-    font-size: 18px;
-    border-radius: 22px;
+    font-size: 1.8rem;
+    border-radius: 2.2rem;
 }
 
 .dia-wrap .btn-wrap .btn a {
@@ -279,98 +280,98 @@ video.big {
     position: absolute;
     left: 50%;
     top: 50%;
-    padding: 20px 10px;
+    padding: 2rem 1rem;
     transform: translate(-50%, -50%);
-    width: 300px;
-    height: 400px;
-    border-radius: 20px;
+    width: 30rem;
+    height: 40rem;
+    border-radius: 2rem;
     background-color: #fff;
     z-index: 101;
 }
 
 .card-content .card-bg {
     box-sizing: border-box;
-    padding: 10px;
+    padding: 1rem;
     position: relative;
     display: flex;
     flex-direction: row;
-    width: 280px;
-    height: 80px;
+    width: 28rem;
+    height: 8rem;
     background-image: url("../img/quan_bg.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .card-content .card-bg .left {
-    width: 180px;
+    width: 18rem;
 }
 
 .card-content .card-bg .left div:nth-child(1) {
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #000;
-    margin-bottom: 6px;
+    margin-bottom: .6rem;
 }
 
 .card-content .card-bg .left div:nth-child(2),
 .card-content .card-bg .left div:nth-child(3) {
-    font-size: 12px;
+    font-size: 1.2rem;
     color: #999;
-    margin-top: 3px;
+    margin-top: .3rem;
 }
 
 .card-content .card-bg .left div:nth-child(4) {
-    font-size: 12px;
+    font-size: 1.2rem;
     color: #AF0DF3;
-    margin-top: 3px;
+    margin-top: .3rem;
 }
 
 .card-content .card-bg .right {
     position: absolute;
-    right: 10px;
-    bottom: 10px;
-    width: 66px;
-    height: 20px;
-    line-height: 20px;
+    right: 1rem;
+    bottom: 1rem;
+    width: 6.6rem;
+    height: 2rem;
+    line-height: 2rem;
     text-align: center;
     color: #F30E60;
     background-color: #fff;
-    border-radius: 8px;
-    font-size: 12px;
+    border-radius: .8rem;
+    font-size: 1.2rem;
 }
 
 .card-content .card-inp {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .card-content .card-inp input {
     outline: none;
-    border-radius: 8px;
+    border-radius: .8rem;
     border: 1px solid #EEEEEE;
-    width: 180px;
-    height: 38px;
-    line-height: 38px;
-    margin-right: 8px;
-    text-indent: 10px;
+    width: 18rem;
+    height: 3.8rem;
+    line-height: 3.8rem;
+    margin-right: .8rem;
+    text-indent: 1rem;
 }
 
 .card-content .card-inp div {
-    width: 80px;
-    height: 38px;
-    line-height: 38px;
+    width: 8rem;
+    height: 3.8rem;
+    line-height: 3.8rem;
     text-align: center;
     color: #fff;
     background-color: #F30E60;
-    border-radius: 8px;
+    border-radius: .8rem;
 }
 
 .card-content .qrcode {
-    width: 167px;
-    height: 167px;
+    width: 16.7rem;
+    height: 16.7rem;
     display: block;
-    margin: 10px auto;
+    margin: 1rem auto;
 }
 
 .card-content .btn-wrap {
@@ -381,13 +382,13 @@ video.big {
 }
 
 .card-content .btn-wrap div {
-    width: 80px;
-    height: 38px;
-    line-height: 38px;
+    width: 8rem;
+    height: 3.8rem;
+    line-height: 3.8rem;
     text-align: center;
     border: 1px solid #F30E60;
     color: #F30E60;
-    border-radius: 8px;
+    border-radius: .8rem;
 }
 
 .card-content .btn-wrap div a {
@@ -396,10 +397,10 @@ video.big {
 }
 
 .card-wrap .card-content .close {
-    width: 34px;
-    height: 34px;
+    width: 3.4rem;
+    height: 3.4rem;
     position: absolute;
-    bottom: -60px;
+    bottom: -6rem;
     left: 50%;
     transform: translateX(-50%);
 }

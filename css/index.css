@@ -15,49 +15,50 @@ html, body, #app {
 
 .luck-draw {
     position: absolute;
-    top: 274px;
+    top: 27rem;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    box-shadow: 0 0 20px 20px rgba(255, 255, 255, .3);
+    box-shadow: 0 0 2rem 2rem rgba(255, 255, 255, .3);
+    z-index: 20;
 }
 
 .info-wrap {
     position: absolute;
     left: 50%;
-    top: 60%;
+    bottom: 8rem;
     transform: translateX(-50%);
     width: 95%;
-    height: 28%;
+    height: 15rem;
     background-color: rgba(255, 255, 255, .4);
-    border-radius: 20px;
+    border-radius: 2rem;
 }
 
 .info-wrap .info-title {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #fff;
-    padding: 15px 0;
+    padding: 1.5rem 0;
 }
 
 .info-wrap .wrap {
-    height: 68%;
+    height: 9rem;
     overflow: hidden;
 }
 
 .info-wrap .user-wrap {
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #fff;
 }
 
 .anim {
     transition: all 0.5s;
-    margin-top: -25px;
+    margin-top: -2.5rem;
 }
 
 .info-wrap .user-wrap .user-list {
-    height: 25px;
-    line-height: 25px;
+    height: 2.5rem;
+    line-height: 2.5rem;
     text-align: center;
 }
 
@@ -66,18 +67,18 @@ html, body, #app {
     justify-content: space-around;
     position: absolute;
     width: 100%;
-    top: 90%;
+    bottom: 2rem;
 }
 
 .button-wrap .btn {
     width: 40%;
-    height: 44px;
+    height: 4.4rem;
     background-color: #F80056;
-    border-radius: 22px;
+    border-radius: 2.2rem;
     text-align: center;
-    line-height: 44px;
+    line-height: 4.4rem;
     color: #fff;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .dia-wrap {
@@ -99,9 +100,9 @@ html, body, #app {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    padding: 60px 50px 40px 80px;
-    height: 360px;
+    width: 33.7rem;
+    padding: 6rem 5rem 4rem 8rem;
+    height: 36rem;
     background-image: url("../img/dia-bg1.png");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -115,21 +116,21 @@ html, body, #app {
 
 .description-dia .title,
 .my-gift-dia .title {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
     font-weight: 500;
 }
 
 .description-dia .title:nth-child(3),
 .my-gift-dia .title:nth-child(3) {
-    margin-top: 15px;
+    margin-top: 1.5rem;
 }
 
 .description-dia .content,
 .my-gift-dia .content {
-    font-size: 14px;
-    line-height: 20px;
-    max-height: 40px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    max-height: 4rem;
     overflow: auto;
 }
 
@@ -138,15 +139,15 @@ html, body, #app {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 190px;
-    margin: 10px 0 0;
-    height: 30px;
-    line-height: 30px;
+    width: 19rem;
+    margin: 1rem 0 0;
+    height: 3rem;
+    line-height: 3rem;
     text-align: center;
     color: #fff;
-    font-size: 16px;
+    font-size: 1.6rem;
     background: linear-gradient(180deg, #8449C9, #8E36FC);
-    border-radius: 15px;
+    border-radius: 1.5rem;
 }
 
 .my-gift-list a {
@@ -158,14 +159,14 @@ html, body, #app {
 .message-dia {
     background-image: none;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 1rem;
     padding: 0;
 }
 
 .get-gift-dia img {
-    width: 150px;
+    width: 15rem;
     position: absolute;
-    top: -60px;
+    top: -6rem;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -173,9 +174,9 @@ html, body, #app {
 .get-gift-dia .content,
 .message-dia .content {
     color: #28062E;
-    font-size: 18px;
+    font-size: 1.8rem;
     text-align: center;
-    padding: 120px 0 100px;
+    padding: 12rem 0 10rem;
 }
 
 .get-gift-dia .content > img,
@@ -188,39 +189,39 @@ html, body, #app {
     border-top: 1px solid #D1D1DA;
     text-align: center;
     color: #000000;
-    font-size: 18px;
-    height: 60px;
-    line-height: 60px;
+    font-size: 1.8rem;
+    height: 6rem;
+    line-height: 6rem;
 }
 
 .message-dia {
-    height: 200px;
+    height: 20rem;
 }
 
 .message-dia .title {
     color: #28062E;
-    padding: 20px 0;
+    padding: 2rem 0;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
 }
 
 .message-dia .content {
-    padding: 20px 0 50px;
-    font-size: 16px;
+    padding: 2rem 0 5rem;
+    font-size: 1.6rem;
 }
 
 .message-dia .btn-wrap {
     display: flex;
-    height: 50px;
-    line-height: 50px;
+    height: 5rem;
+    line-height: 5rem;
     border-top: 1px solid #D1D1DA;
 }
 
 .message-dia .btn-wrap div {
     flex: 1;
     text-align: center;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .message-dia .btn-wrap .cancel {

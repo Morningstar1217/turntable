@@ -22,8 +22,8 @@
           <LuckyWheel
               class="luck-draw"
               ref="LuckyWheel"
-              width="300px"
-              height="300px"
+              width="25rem"
+              height="25rem"
               :blocks="blocks"
               :prizes="prizes"
               :buttons="buttons"
@@ -54,7 +54,7 @@
             <div class="title">我的奖品</div>
             <div class="content">2021-02-01至2021-06-21</div>
             <div class="title">我的奖品</div>
-            <div class="content" style="height: 120px;max-height:none;">
+            <div class="content" style="height: 12rem;max-height:none;">
               <div class="my-gift-list" v-for="(item,index) in myGift" :key="index" @click="toGetGift(item)">
                 <a href="">{{ item.name }}</a>
                 <span style="margin-left: 5px">领取奖品</span>
@@ -66,13 +66,13 @@
             <div class="title">活动时间</div>
             <div class="content">2021-02-01至2021-06-21</div>
             <div class="title">活动规则</div>
-            <div class="content" style="height: 120px;max-height:none;">
+            <div class="content" style="height: 12rem;max-height:none;">
               大转盘大转盘大转盘大转盘转盘大转盘大转盘大转盘大转盘转盘
               <img src="./img/gift_icon.png" alt="">
             </div>
             <div class="btn" @click="desFlag=false">关闭</div>
           </div>
-          <div class="get-gift-dia" style="height: 300px" v-if="getGiftFlag">
+          <div class="get-gift-dia" style="height: 30rem" v-if="getGiftFlag">
             <img src="./img/gift_title.png" alt="">
             <div class="content">
               很遗憾，谢谢参与！
@@ -97,13 +97,13 @@
             return {
                 prizes: [],
                 buttons: [{
-                    radius: '40px',
-                    imgs: [{ src: ('./img/turntable-pointer.png'), width: '105%', top: '-150%' }]
+                    radius: '3rem',
+                    imgs: [{ src: ('./img/turntable-pointer.png'), width: '108%', top: '-150%' }]
                 }],
                 blocks: [
                     { padding: '0px', background: '#fa3e3f' },
                     {
-                        padding: '30px',
+                        padding: '3rem',
                         background: '#f9d400',
                         imgs: [{
                             src: './img/rotate-bg.gif',
@@ -268,7 +268,6 @@
             },
             toGetGift(item) {
                 //判断是否跳转
-
             },
             setView() {
                 const WIDTH = 750

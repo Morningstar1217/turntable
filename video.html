@@ -48,12 +48,20 @@
             return {}
         },
         mounted() {
-
+            window.addEventListener('resize', () => {
+                this.setView()
+            })
+            this.setView()
         },
         created() {
 
         },
-        methods: {}
+        methods: {
+            setView() {
+                const WIDTH = 750
+                document.documentElement.style.fontSize = (20 * screen.width / WIDTH) + 'px'
+            }
+        }
     })
 </script>
 </html>

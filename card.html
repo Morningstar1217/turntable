@@ -140,7 +140,10 @@
             }
         },
         mounted() {
-
+            window.addEventListener('resize', () => {
+                this.setView()
+            })
+            this.setView()
         },
         created() {
 
@@ -149,6 +152,10 @@
             handleUse(item) {
                 if (item.status === 1) return false
                 this.diaFlag = true
+            },
+            setView() {
+                const WIDTH = 750
+                document.documentElement.style.fontSize = (20 * screen.width / WIDTH) + 'px'
             }
         }
     })
