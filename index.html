@@ -51,13 +51,11 @@
             </div>
           </div>
           <div class="my-gift-dia" v-if="giftFlag">
-            <div class="title">我的奖品</div>
-            <div class="content">2021-02-01至2021-06-21</div>
-            <div class="title">我的奖品</div>
-            <div class="content" style="height: 12rem;max-height:none;">
+            <div class="content" style="height: 23rem;max-height:none;">
               <div class="my-gift-list" v-for="(item,index) in myGift" :key="index" @click="toGetGift(item)">
-                <a href="">{{ item.name }}</a>
-                <span style="margin-left: 5px">领取奖品</span>
+                <span>{{ item.name }}</span>
+                <a class="toGift" style="margin-left: 5px" v-if="!item.status">领取奖品</a>
+                <span class="hadGet" style="margin-left: 5px;" v-else>已领取</span>
               </div>
             </div>
             <div class="btn" @click="giftFlag=false">关闭</div>
@@ -66,22 +64,22 @@
             <div class="title">活动时间</div>
             <div class="content">2021-02-01至2021-06-21</div>
             <div class="title">活动规则</div>
-            <div class="content" style="height: 12rem;max-height:none;">
+            <div class="content" style="height: 13rem;max-height:none;">
               大转盘大转盘大转盘大转盘转盘大转盘大转盘大转盘大转盘转盘
               <img src="./img/gift_icon.png" alt="">
             </div>
             <div class="btn" @click="desFlag=false">关闭</div>
           </div>
-          <div class="get-gift-dia" style="height: 30rem" v-if="getGiftFlag">
+          <div class="get-gift-dia" style="width: 30rem;height: 24rem" v-if="getGiftFlag">
             <img src="./img/gift_title.png" alt="">
-            <div class="content">
+            <div class="content" style="padding: 8rem 0">
               很遗憾，谢谢参与！
             </div>
             <div class="btn-wrap" @click="getGiftFlag = false">
               确定
             </div>
           </div>
-          <div class="message-dia" v-if="msgFlag">
+          <div class="message-dia" v-if="msgFlag" style="width: 30rem">
             <div class="title">温馨提示</div>
             <div class="content">
               参加活动将会发一条视频在您的抖音哦
@@ -201,10 +199,12 @@
                 msgFlag: false,
                 myGift: [
                     {
-                        name: '一等奖'
+                        name: '一等奖',
+                        status: 0
                     },
                     {
-                        name: '二等奖'
+                        name: '二等奖',
+                        status: 1
                     }
                 ],
                 count: 0

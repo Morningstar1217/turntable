@@ -150,9 +150,20 @@ html, body, #app {
     border-radius: 1.5rem;
 }
 
-.my-gift-list a {
+.my-gift-list a.toGift,
+.my-gift-dia .hadGet {
     text-decoration: none;
+    color: #fff !important;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background-color: #F80056;
+    border-radius: .4rem;
+    padding: 0 .5rem;
+}
+
+.my-gift-dia .hadGet {
     color: #9E55FF !important;
+    background-color: transparent;
 }
 
 .get-gift-dia,
