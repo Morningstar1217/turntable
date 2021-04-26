@@ -22,8 +22,8 @@
           <LuckyWheel
               class="luck-draw"
               ref="LuckyWheel"
-              width="26rem"
-              height="26rem"
+              :width="luckWidth"
+              :height="luckHeight"
               :blocks="blocks"
               :prizes="prizes"
               :buttons="buttons"
@@ -32,9 +32,9 @@
               @start="startCallBack"
               @end="endCallBack"
           />
-          <div class="info-wrap">
+          <div class="info-wrap" :style="{height:infoHeight+'px'}">
             <div class="info-title">中奖信息</div>
-            <div class="wrap">
+            <div class="wrap" style="height: 60%">
               <div class="user-wrap" :class="{'anim': animate}">
                 <div class="user-list" v-for="(item,index) in userList" :key="index">
                   恭喜{{ item.name }}用户中奖
@@ -95,7 +95,7 @@
             return {
                 prizes: [],
                 buttons: [{
-                    radius: '3rem',
+                    radius: '2.5rem',
                     imgs: [{ src: ('./img/turntable-pointer.png'), width: '108%', top: '-150%' }]
                 }],
                 blocks: [
@@ -207,7 +207,10 @@
                         status: 1
                     }
                 ],
-                count: 0
+                count: 0,
+                luckWidth: '',
+                luckHeight: '',
+                infoHeight: ''
             }
         },
         mounted() {
@@ -219,6 +222,9 @@
             this.setView()
         },
         created() {
+            this.luckWidth = screen.width * .85 + 'px'
+            this.luckHeight = screen.width * .85 + 'px'
+            this.infoHeight = screen.height * .2
             setInterval(this.scroll, 1500)
         },
         methods: {
