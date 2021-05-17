@@ -50,12 +50,18 @@
               中奖信息
             </div>
           </div>
-          <div class="my-gift-dia" v-if="giftFlag">
+          <div class="my-gift-dia" v-if="giftFlag" style="padding-left: 5rem;">
             <div class="content" style="height: 23rem;max-height:none;">
-              <div class="my-gift-list" v-for="(item,index) in myGift" :key="index" @click="toGetGift(item)">
-                <span>{{ item.name }}</span>
-                <a class="toGift" style="margin-left: 5px" v-if="!item.status">领取奖品</a>
-                <span class="hadGet" style="margin-left: 5px;" v-else>已领取</span>
+              <div class="my-gift-list" style="display: flex;flex-direction: row;align-items: center"
+                   v-for="(item,index) in myGift" :key="index" @click="toGetGift(item)">
+                <div>
+                  <img src="./img/gift_icon.png" style="width: 6rem;height: 6rem;margin-right:1rem" alt="">
+                </div>
+                <div>
+                  <div style="font-weight: 500;color: #9e55ff!important;">{{ item.name }}</div>
+                  <a class="toGift" style="color: #fff!important;" v-if="!item.status">领取奖品</a>
+                  <span class="hadGet" style="" v-else>已领取</span>
+                </div>
               </div>
             </div>
             <div class="btn" @click="giftFlag=false">关闭</div>
@@ -96,7 +102,7 @@
                 prizes: [],
                 buttons: [{
                     radius: '2.5rem',
-                    imgs: [{ src: ('./img/turntable-pointer.png'), width: '108%', top: '-150%' }]
+                    imgs: [{ src: ('./img/turntable-pointer.png'), width: '108%', top: '-150%' }],
                 }],
                 blocks: [
                     { padding: '0px', background: '#fa3e3f' },
@@ -106,91 +112,91 @@
                         imgs: [{
                             src: './img/rotate-bg.gif',
                             width: '100%',
-                            rotate: true
-                        }]
+                            rotate: true,
+                        }],
                     },
-                    { padding: '1px', background: '#e76f51' }
+                    { padding: '1px', background: '#e76f51' },
                 ],
                 defaultStyle: {
                     fontColor: '#fff',
-                    fontSize: '12px'
+                    fontSize: '12px',
                 },
                 defaultConfig: {
-                    gutter: '1px'
+                    gutter: '1px',
                 },
                 userList: [
                     {
-                        name: '戴菲菲'
+                        name: '戴菲菲',
                     },
                     {
-                        name: '菲戴戴'
+                        name: '菲戴戴',
                     },
                     {
-                        name: '菲戴菲'
+                        name: '菲戴菲',
                     },
                     {
-                        name: '戴菲菲'
+                        name: '戴菲菲',
                     },
                     {
-                        name: '菲戴戴'
+                        name: '菲戴戴',
                     },
                     {
-                        name: '菲戴菲'
+                        name: '菲戴菲',
                     },
                     {
-                        name: '戴菲菲'
+                        name: '戴菲菲',
                     },
                     {
-                        name: '菲戴戴'
+                        name: '菲戴戴',
                     },
                     {
-                        name: '菲戴菲'
+                        name: '菲戴菲',
                     },
                     {
-                        name: '戴菲菲'
+                        name: '戴菲菲',
                     },
                     {
-                        name: '菲戴戴'
+                        name: '菲戴戴',
                     },
                     {
-                        name: '菲戴菲'
+                        name: '菲戴菲',
                     },
                     {
-                        name: '戴菲菲'
+                        name: '戴菲菲',
                     },
                     {
-                        name: '菲戴戴'
+                        name: '菲戴戴',
                     },
                     {
-                        name: '菲戴菲'
+                        name: '菲戴菲',
                     },
                     {
-                        name: '戴菲菲'
+                        name: '戴菲菲',
                     },
                     {
-                        name: '菲戴戴'
+                        name: '菲戴戴',
                     },
                     {
-                        name: '菲戴菲'
+                        name: '菲戴菲',
                     },
                     {
-                        name: '戴菲菲'
+                        name: '戴菲菲',
                     },
                     {
-                        name: '菲戴戴'
+                        name: '菲戴戴',
                     },
                     {
-                        name: '菲戴菲'
+                        name: '菲戴菲',
                     },
                     {
-                        name: '戴菲菲'
+                        name: '戴菲菲',
                     },
                     {
-                        name: '菲戴戴'
+                        name: '菲戴戴',
                     },
                     {
-                        name: '菲戴菲'
-                    }
+                        name: '菲戴菲',
+                    },
                 ],
                 animate: false,
                 desFlag: false,
@@ -200,17 +206,17 @@
                 myGift: [
                     {
                         name: '一等奖',
-                        status: 0
+                        status: 0,
                     },
                     {
                         name: '二等奖',
-                        status: 1
-                    }
+                        status: 1,
+                    },
                 ],
                 count: 0,
                 luckWidth: '',
                 luckHeight: '',
-                infoHeight: ''
+                infoHeight: '',
             }
         },
         mounted() {
@@ -236,14 +242,14 @@
                     { name: '抽奖券', img: './img/decorate1.png', color: '#ff6393' },
                     { name: '元宝', img: './img/decorate1.png', color: '#ffc287' },
                     { name: '元宝', img: './img/decorate1.png', color: '#ff6393' },
-                    { name: '元宝', img: './img/decorate1.png', color: '#ffc287' }
+                    { name: '元宝', img: './img/decorate1.png', color: '#ffc287' },
                 ]
                 data.forEach((item, index) => {
                     prizes.push({
                         name: item.name,
                         background: item.color,
                         fonts: [{ text: item.name, top: '10%' }],
-                        imgs: [{ src: item.img, width: '30%', top: '35%' }]
+                        imgs: [{ src: item.img, width: '30%', top: '35%' }],
                     })
                 })
                 this.prizes = prizes
@@ -277,9 +283,9 @@
             },
             setView() {
                 const WIDTH = 750
-                document.documentElement.style.fontSize = (20 * screen.width / WIDTH) + 'px'
-            }
-        }
+                document.documentElement.style.fontSize = ((20 * screen.width / WIDTH) > 20 ? 20 : (20 * screen.width / WIDTH)) + 'px'
+            },
+        },
     })
 </script>
 </html>

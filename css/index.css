@@ -218,7 +218,10 @@ html, body, #app {
 }
 
 .message-dia .content {
-    padding: 2rem 0 5rem;
+    box-sizing: border-box;
+    height: 9rem;
+    overflow: auto;
+    padding: 1rem 0;
     font-size: 1.6rem;
 }
 

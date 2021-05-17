@@ -49,8 +49,11 @@ body, html {
 .middle div:nth-child(1) {
     font-size: 1.8rem;
     color: #000;
-    margin-bottom: 5px;
+    margin-bottom: .5rem;
     font-weight: 500;
+    width: 14rem;
+    overflow: hidden;
+    height: 1.8rem;
 }
 
 .middle div:nth-child(2) {
@@ -61,7 +64,7 @@ body, html {
 .middle div:nth-child(3) {
     font-size: 1.4rem;
     color: #AF0DF3;
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 
 .card-list .right {
